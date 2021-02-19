@@ -8,7 +8,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/scss/_mixins';
 .daily-wrapper {
 	text-align: center;
 }

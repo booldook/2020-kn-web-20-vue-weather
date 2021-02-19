@@ -14,7 +14,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '@/assets/scss/_mixins';
 #app {
 	@include flex($SB, $ST);
 	flex-direction: column;
