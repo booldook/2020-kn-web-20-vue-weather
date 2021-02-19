@@ -1,15 +1,15 @@
 <template lang="pug">
-	.home-wrapper
-		h1 HOME
+	.days-wrapper
+		h1 5DAYS
 </template>
 <script>
 export default {
-	name: 'Home'
+	name: 'Days'
 }
 </script>
 <style lang="scss" scoped>
 @import '@/assets/scss/_mixins';
-.home-wrapper {
+.days-wrapper {
 	text-align: center;
 }
 </style>
