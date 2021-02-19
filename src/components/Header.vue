@@ -16,5 +16,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-	
+@import '@/assets/scss/_mixins';
+
+.header-wrapper {
+	@include flex($SB, $CT);
+}
 </style>
