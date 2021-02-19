@@ -1,0 +1,51 @@
+// Color
+$colorBlack: #111;
+$colorDarker: #333;
+$colorDark: #555;
+$colorGrey: #999;
+$colorLight: #bcbcbc;
+$colorLighter: #eaeaea;
+$colorWhite: #f1f1f1;
+
+$colorGreen: #2d7218;
+$colorRed: #b61c11;
+
+$txtPrimary: #0f203f;
+$txtAccent: #1a5aad;
+$txtLight: #f8f8f8;
+$txtDark: #131313;
+
+$tbHeadBg: #faf1e8;
+$tbHeadTxt: #2c3238;
+$tbHeadBorder: #dee2e6;
+
+$pagerActive: #fc8739;
+
+
+// 반응형
+$width-desktop: 1199px;
+$width-laptop: 991px;
+$width-tablet: 767px;
+$width-mobile: 575px;
+
+
+// 폰트
+$open: 'Open Sans', sans-serif;
+$notoKr: 'Noto Sans KR', sans-serif;
+$sunKr: 'Sunflower', sans-serif;
+
+$xs: 0.75em;
+$sm: 0.875em;
+$md: 1em;
+$lg: 1.125em;
+$xl: 1.25em;
+
+// FLEX
+$CT: center; 
+$FS: flex-start; 
+$FE: flex-end;
+$SB: space-between; 
+$SA: space-around; 
+$SE: space-evenly;
+$ST: stretch; 
+$BL: baseline;
