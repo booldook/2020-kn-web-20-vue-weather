@@ -15,6 +15,7 @@ export default {
 			return v;
 		});
 		this.city.unshift({value: null, text: '도시를 선택하세요.'});
+		this.app_id = VUE_APP_ID
 	},
 	watch: {
 		selected: function(nv, ov) {
@@ -25,6 +26,7 @@ export default {
 		return {
 			selected: null,
 			city: [],
+			app_id: ''
 		}
 	}
 }

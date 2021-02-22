@@ -1,8 +1,8 @@
+import { getDaily } from './api'
+
 export default {
-	ACT_CITY({ commit }, value) {
+	async ACT_CITY({ commit }, value) {
 		commit('MUT_CITY', value);
-	},
-	ACT_DAILY({ commit }, value) {
-		commit('MUT_DAILY', {name: '오늘의 날씨', value});
-	},
+		commit('MUT_DAILY', await getDaily(value))
+	}
 }
