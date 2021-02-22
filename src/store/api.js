@@ -6,8 +6,14 @@ const DAYS_URL = 'https://api.openweathermap.org/data/2.5/forecast'
 const params = { units: 'metric', lang: 'kr', appid: APP_ID }
 
 // 현재 위치의 navigator.getPosition()
-const getPosition = async () => {
-
+const getPosition = () => {
+	return new Promise((resolve, reject) => {
+		navigator.geolocation.getCurrentPosition((r) => {
+			resolve({ lat: r.coords.latitude, lon: r.coords.longitude })
+		}, (err) => {
+			reject(err)
+		})
+	});
 }
 
 // selectedCity => daily
