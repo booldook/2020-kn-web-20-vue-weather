@@ -14,6 +14,12 @@ export default {
 			v.value = v.id
 			return v;
 		});
+		this.city.unshift({value: null, text: '도시를 선택하세요.'});
+	},
+	watch: {
+		selected: function(nv, ov) {
+			this.$store.dispatch('ACT_CITY', nv)
+		}
 	},
 	data() {
 		return {
