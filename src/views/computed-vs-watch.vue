@@ -1,18 +1,13 @@
 <template lang="pug">
 	.home-wrapper
 		.title-wrapper
-			h1 Vue를 활용한 날씨정보 앱
+			h1 computed vs watch
 				small.ml-3 v1.0
-		Search
 		input(type="text" v-model="query")
 		div {{myName}}
 </template>
 <script>
-import Search from '../components/Search.vue'
-
 export default {
-	name: 'Home',
-	components: { Search },
 	computed: {
 		// 내 값이 바뀌어야 될때.
 		myName: function() {
@@ -30,9 +25,6 @@ export default {
 			query: ''
 		}
 	},
-	methods: {
-		
-	}
 }
 </script>
 <style lang="scss" scoped>
