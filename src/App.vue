@@ -1,7 +1,7 @@
 <template lang="pug">
 	#app.container
 		Header
-		router-view.wrapper
+		router-view.wrapper-view
 		Footer
 </template>
 <script>
@@ -18,7 +18,7 @@ export default {
 	@include flex($SB, $ST);
 	flex-direction: column;
 	height: 100vh;
-	.wrapper {
+	.wrapper-view {
 		border-left: 1px solid $colorLight;
 		border-right: 1px solid $colorLight;
 		flex-grow: 1;
