@@ -1,0 +1,14 @@
+<script>
+	var n = 1825367;
+	if(typeof n == 'string' || typeof n == 'number') {
+		console.log('HI~');
+	}
+
+	const PARAMS = { a: 'A', b: 'B' };
+
+	function test() {
+		const params = { ...PARAMS };
+		console.log(params);
+	}
+	test();
+</script>

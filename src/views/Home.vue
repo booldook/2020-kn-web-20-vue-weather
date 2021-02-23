@@ -15,7 +15,7 @@ export default {
 	components: { Search },
 	computed: { ...mapGetters(['GET_DAILY']) },
 	created() {
-		this.$store.dispatch('ACT_POSITION')
+		this.$store.dispatch('ACT_WEATHER', null)
 		console.log(process.env);
 	},
 	data() {

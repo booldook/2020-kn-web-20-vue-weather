@@ -5,7 +5,7 @@ export default {
 	MUT_DAILY(state, r) {
 		state.daily = r;
 	},
-	MUT_GEO(state, r) {
-		state.geo = r;
+	MUT_DAYS(state, r) {
+		state.days = r;
 	}
 }

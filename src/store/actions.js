@@ -1,11 +1,9 @@
-import { getDaily, getPosition } from './api'
+import { getDaily, getDays } from '../api/weather-api'
 
 export default {
-	async ACT_CITY({ commit }, value) {
+	async ACT_WEATHER({ commit }, value) {
 		commit('MUT_CITY', value);
 		commit('MUT_DAILY', await getDaily(value))
+		commit('MUT_DAYS', await getDays())
 	},
-	async ACT_POSITION({ commit }) {
-		commit('MUT_DAILY', await getPosition())
-	}
 }

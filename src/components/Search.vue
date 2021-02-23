@@ -14,11 +14,11 @@ export default {
 			v.value = v.id
 			return v;
 		});
-		this.city.unshift({value: null, text: '도시를 선택하세요.'});
+		this.city.unshift({value: null, text: '현재위치'});
 	},
 	watch: {
 		selected: function(nv) {
-			this.$store.dispatch('ACT_CITY', nv)
+			this.$store.dispatch('ACT_WEATHER', nv)
 		}
 	},
 	data() {
