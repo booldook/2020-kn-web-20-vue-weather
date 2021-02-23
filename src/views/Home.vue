@@ -4,7 +4,7 @@
 			h2 Vue를 활용한 날씨정보 앱
 				small.ml-3 v1.0
 		Search.Search
-		Daily(:value="GET_DAILY")
+		Daily
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -14,7 +14,6 @@ import Daily from '../components/weather/Daily.vue'
 export default {
 	name: 'Home',
 	components: { Search, Daily },
-	computed: { ...mapGetters(['GET_DAILY']) },
 	created() {
 		this.$store.dispatch('ACT_WEATHER', null)
 		console.log(process.env);

@@ -1,9 +1,11 @@
 <template lang="pug">
-	.wrapper icon
+	.wrapper
+		img(:src="value")
 </template>
 <script>
 export default {
-	
+	name: 'Icon',
+	props: ['value']
 }
 </script>
 <style lang="scss" scoped>
