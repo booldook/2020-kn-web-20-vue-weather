@@ -6,6 +6,6 @@ export default {
 		commit('MUT_DAILY', await getDaily(value))
 	},
 	async ACT_POSITION({ commit }) {
-		commit('MUT_GEO', await getPosition())
+		commit('MUT_DAILY', await getPosition())
 	}
 }

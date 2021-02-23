@@ -9,7 +9,7 @@
 <script>
 export default {
 	computed: {
-		// 내 값이 바뀌어야 될때.
+		// 다른 요인으로 인해 내 값이 바뀌어야 될때.
 		myName: function() {
 			return this.query;
 		}

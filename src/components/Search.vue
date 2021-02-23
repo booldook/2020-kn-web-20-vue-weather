@@ -17,7 +17,7 @@ export default {
 		this.city.unshift({value: null, text: '도시를 선택하세요.'});
 	},
 	watch: {
-		selected: function(nv, ov) {
+		selected: function(nv) {
 			this.$store.dispatch('ACT_CITY', nv)
 		}
 	},
