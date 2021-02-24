@@ -18,7 +18,7 @@ export default {
 	},
 	watch: {
 		selected: function(nv) {
-			this.$store.dispatch('ACT_WEATHER', nv)
+			this.$store.dispatch('ACT_DAILY', nv)
 		}
 	},
 	data() {
