@@ -3,7 +3,7 @@
 		.title-wrapper
 			Title.title(:value="title")
 			Search.search(:value="value" :selCity="GET_CITY")
-		DayList.day-list
+		DayList.day-list(:value="GET_DAYS")
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -48,7 +48,6 @@ export default {
 	}
 	.day-list {
 		flex-grow: 1;
-		border: 2px solid red;
 	}
 }
 </style>

@@ -18,20 +18,6 @@ import Wind from './Wind.vue'
 import { mapGetters } from 'vuex'
 import moment from 'moment'
 
-
-const windGen = (deg) => {
-	let value;
-	if(deg >= 345 || deg < 15) value = '북'
-	else if(deg >= 15 && deg < 75) value = '북동'
-	else if(deg >= 75 && deg < 105) value = '동'
-	else if(deg >= 105 && deg < 165) value = '남동'
-	else if(deg >= 165 && deg < 195) value = '남'
-	else if(deg >= 195 && deg < 255) value = '남서'
-	else if(deg >= 255 && deg < 285) value = '서'
-	else if(deg >= 285 && deg < 345) value = '북서'
-	return value
-}
-
 export default {
 	name: 'Daily',
 	components: { Title, Time, Temp, Icon, Summary, Wind },
@@ -84,11 +70,10 @@ export default {
 			return (
 				this.GET_DAILY
 				? {
-						direction: windGen(this.GET_DAILY.wind.deg) + '풍', 
 						speed: this.GET_DAILY.wind.speed,
 						deg: this.GET_DAILY.wind.deg
 					}
-				: { direction: '', speed: '', deg: '' }
+				: { speed: '', deg: '' }
 			)
 		}
 	},

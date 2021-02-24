@@ -1,7 +1,7 @@
 <template lang="pug">
 	.home-wrapper
 		.title-wrapper
-			h2 Vue를 활용한 날씨정보 앱
+			h2 Vue를 활용한 날씨정보
 				small.ml-3 v1.0
 		Search.Search(:value="value")
 		Daily

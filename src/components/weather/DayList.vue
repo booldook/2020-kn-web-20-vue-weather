@@ -1,11 +1,20 @@
 <template lang="pug">
-	div
+	div.day-list
+		Day(v-for="v, i in value ? value.list : null" :key="i" :value="v")
 </template>
 <script>
+import Day from './Day.vue'
+
 export default {
-	name: 'DayList'
+	name: 'DayList',
+	props: ['value'],
+	components: { Day }
 }
 </script>
 <style lang="scss" scoped>
-	
+	.day-list {
+		overflow-y: auto;
+		@include flex($FS, $FS);
+		flex-wrap: wrap;
+	}
 </style>
