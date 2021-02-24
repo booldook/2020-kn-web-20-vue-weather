@@ -17,13 +17,13 @@ export default {
 #app {
 	@include flex($SB, $ST);
 	flex-direction: column;
+	padding: 0;
 	height: 100vh;
 	.wrapper-view {
 		border-left: 1px solid $colorLight;
 		border-right: 1px solid $colorLight;
 		flex-grow: 1;
 		overflow-y: auto;
-		padding: 2em;
 	}
 }
 </style>

@@ -3,6 +3,7 @@
 		.title-wrapper
 			Title.title(:value="title")
 			Search.search(:value="value" :selCity="GET_CITY")
+		DayList.day-list
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -28,14 +29,14 @@ export default {
 			)
 		},
 	},
-	created() {
-		//this.$store.dispatch('ACT_DAYS', this.GET_CITY)
-	}
 }
 </script>
 <style lang="scss" scoped>
 .days-wrapper {
+	@include flex($ST, $ST);
+	flex-direction: column;
 	.title-wrapper {
+		padding: 1em;
 		@include flex($FS, $CT);
 		.title {
 			font-size: 1.25em;
@@ -44,6 +45,10 @@ export default {
 		.search {
 			min-width: 140px;
 		}
+	}
+	.day-list {
+		flex-grow: 1;
+		border: 2px solid red;
 	}
 }
 </style>

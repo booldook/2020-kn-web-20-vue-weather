@@ -29,6 +29,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home-wrapper {
+	padding: 1em 2em;
 	text-align: center;
 	@include flex($CT, $CT);
 	flex-direction: column;
