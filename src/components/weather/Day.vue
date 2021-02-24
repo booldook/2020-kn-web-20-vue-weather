@@ -1,10 +1,12 @@
 <template lang="pug">
 	.day
-		Time.Time(:value="time")
-		Icon.Icon(:value="icon")
-		Temp.Temp(:value="temp")
-		Summary.Summary(:value="summary")
-		Wind.Wind(:value="wind")
+		.icon
+			Icon.Icon(:value="icon")
+		.cont
+			Temp.Temp(:value="temp")
+			Summary.Summary(:value="summary")
+			Wind.Wind(:value="wind")
+			Time.Time(:value="time")
 </template>
 <script>
 import Time from './Time.vue'
@@ -71,13 +73,33 @@ export default {
 </script>
 <style lang="scss" scoped>
 	.day {
-		width: 33.3333%;
-		border: 1px solid red;
-		@include laptop {
-			width: 50%;
+		padding: 2%;
+		margin: 1%;
+		border: 1px solid $colorLighter;
+		@include flex($FS, $FS);
+		width: 31.3333%;
+		font-size: 0.875em;
+		.Temp {
+			font-size: 1em;
+		}
+		.Summary {
+			font-size: 1.25em;
+		}
+		.Wind {
+			font-size: 0.875em;
+		}
+		@include desktop {
+			width: 48%;
 		}
 		@include tablet {
-			width: 100%;
+			width: 98%;
+		}
+
+		.icon {
+			margin-right: 1em;
+			@include mobile {
+				margin-right: 1.5em;
+			}
 		}
 	}
 </style>
