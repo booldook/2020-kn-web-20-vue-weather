@@ -3,9 +3,9 @@
 		Title.Title(:value="title")
 		Time.Time(:value="time")
 		Icon.Icon(:value="icon")
-		Temp
-		Summary
-		Wind
+		Temp.Temp(:value="temp")
+		Summary.Summary(:value="summary")
+		Wind.Wind(:value="wind")
 </template>
 <script>
 import Title from './Title.vue'
@@ -17,6 +17,20 @@ import Wind from './Wind.vue'
 
 import { mapGetters } from 'vuex'
 import moment from 'moment'
+
+
+const windGen = (deg) => {
+	let value;
+	if(deg >= 345 || deg < 15) value = '북'
+	else if(deg >= 15 && deg < 75) value = '북동'
+	else if(deg >= 75 && deg < 105) value = '동'
+	else if(deg >= 105 && deg < 165) value = '남동'
+	else if(deg >= 165 && deg < 195) value = '남'
+	else if(deg >= 195 && deg < 255) value = '남서'
+	else if(deg >= 255 && deg < 285) value = '서'
+	else if(deg >= 285 && deg < 345) value = '북서'
+	return value
+}
 
 export default {
 	name: 'Daily',
@@ -43,6 +57,39 @@ export default {
 				? `http://openweathermap.org/img/wn/${this.GET_DAILY.weather[0].icon}@2x.png`
 				: 'http://via.placeholder.com/25x25&text=no%20icon'
 			)
+		},
+		temp: function() {
+			return (
+				this.GET_DAILY
+				? {
+						temp: this.GET_DAILY.main.temp, 
+						feel: this.GET_DAILY.main.feels_like,
+						max: this.GET_DAILY.main.temp_max,
+						min: this.GET_DAILY.main.temp_min,
+					}
+				: { temp: '', feel: '', max: '', min: '' }
+			)
+		},
+		summary: function() {
+			return (
+				this.GET_DAILY
+				? {
+					desc: this.GET_DAILY.weather[0].description, 
+					main: this.GET_DAILY.weather[0].main
+					}
+				: {desc: '', main: ''}
+			)
+		},
+		wind: function() {
+			return (
+				this.GET_DAILY
+				? {
+						direction: windGen(this.GET_DAILY.wind.deg) + '풍', 
+						speed: this.GET_DAILY.wind.speed,
+						deg: this.GET_DAILY.wind.deg
+					}
+				: { direction: '', speed: '', deg: '' }
+			)
 		}
 	},
 }
@@ -55,6 +102,10 @@ export default {
 		}
 		.Time {
 			margin-bottom: 1em;
+		}
+		.Temp {
+			font-size: 1.125em;
+			color: #1a2b4d;
 		}
 	}
 </style>

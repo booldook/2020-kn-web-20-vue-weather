@@ -9,6 +9,7 @@ const PARAMS = { units: 'metric', lang: 'kr', appid: process.env.VUE_APP_APPID }
 const getDaily = async (v) => {
 	const params = v ? { ...PARAMS, id: v } : {...PARAMS, ...await getCoords()}
 	const r = await axios.get(DAILY_URL, { params })
+	console.log(r.data)
 	return r.data
 }
 
