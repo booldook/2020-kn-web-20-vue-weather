@@ -35,20 +35,6 @@ export default {
 			border-right: none;
 		}
 	}
-
-	.fade-enter {
-		opacity: 0;
-	}
-	.fade-enter-active {
-		transition: opacity 0.35s ease;
-	}
-	.fade-leave {
-
-	}
-	.fade-leave-active {
-		transition: opacity 0.15s ease;
-		opacity: 0;
-	}
 }
 
 </style>
