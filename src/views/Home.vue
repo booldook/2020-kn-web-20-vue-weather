@@ -3,8 +3,9 @@
 		.title-wrapper
 			h2 Vue를 활용한 날씨정보
 				small.ml-3 v1.0
-		Search.Search(:value="value")
-		Daily
+		Search.Search(:action="`ACT_DAILY`")
+		transition(name="slide-fade" mode="out-in")
+			Daily(:key="tKey")
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -19,11 +20,16 @@ export default {
 	},
 	data() {
 		return {
-			value: 'ACT_DAILY'
+			tKey: '',
 		}
 	},
-	methods: {
-		
+	computed: {
+		...mapGetters(['GET_DAILY'])
+	},
+	watch: {
+		GET_DAILY: function(nv){
+			if(nv) this.tKey = nv.name
+		}
 	}
 }
 </script>

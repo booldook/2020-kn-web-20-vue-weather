@@ -29,7 +29,7 @@ export default {
 		border-left: 1px solid $colorLight;
 		border-right: 1px solid $colorLight;
 		flex-grow: 1;
-		overflow-y: auto;
+		overflow-y: hidden;
 		@include mobile {
 			border-left: none;
 			border-right: none;
