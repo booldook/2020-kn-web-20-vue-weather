@@ -1,6 +1,6 @@
 <template lang="pug">
 	.wrapper
-		span.name {{value.name}}, 
+		span.name {{value.name}} 
 		span.country {{value.country}}
 </template>
 <script>
