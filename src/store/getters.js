@@ -7,5 +7,8 @@ export default {
 	},
 	GET_DAYS(state) {
 		return state.days
+	},
+	GET_LOADING(state) {
+		return state.isLoading
 	}
 }

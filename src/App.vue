@@ -1,20 +1,22 @@
 <template lang="pug">
-	#app.container 
+	#app.container
 		Header
 		transition(name="fade" mode="out-in")
 			router-view.wrapper-view 
-		Footer 
+		Footer
+		Loading(:active.sync="GET_LOADING")
 </template>
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { mapGetters } from 'vuex'
+import Loading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/vue-loading.css';
 
 export default {
 	name: 'App',
-	components: {
-		Header,
-		Footer
-	}
+	components: { Header, Footer, Loading },
+	computed: { ...mapGetters(['GET_LOADING']) }
 }
 
 </script>

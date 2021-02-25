@@ -1,5 +1,6 @@
 export default {
 	selectedCity: '',
 	daily: null,
-	days: null
+	days: null,
+	isLoading: false,
 }
