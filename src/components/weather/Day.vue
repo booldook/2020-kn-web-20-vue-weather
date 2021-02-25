@@ -32,8 +32,8 @@ export default {
 		icon: function() {
 			return (
 				this.value
-				? `http://openweathermap.org/img/wn/${this.value.weather[0].icon}@2x.png`
-				: 'http://via.placeholder.com/25x25&text=no%20icon'
+				? `https://openweathermap.org/img/wn/${this.value.weather[0].icon}@2x.png`
+				: 'https://via.placeholder.com/25x25&text=no%20icon'
 			)
 		},
 		temp: function() {

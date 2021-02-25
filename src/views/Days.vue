@@ -1,10 +1,10 @@
 <template lang="pug">
 	.days-wrapper
+		//- transition(name="fade" mode="out-in")
 		.title-wrapper
 			Title.title(:value="title")
 			Search.search(:action="`ACT_DAYS`" :selCity="GET_CITY")
-		transition(name="slide-fade" mode="out-in")
-			DayList.day-list(:value="GET_DAYS" :key="tKey" v-if="GET_DAYS")
+		DayList.day-list(:value="GET_DAYS" :key="tKey" v-if="GET_DAYS")
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -39,7 +39,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .days-wrapper {
-	@include flex($ST, $ST);
+	@include flex($ST, $FS);
 	flex-direction: column;
 	.title-wrapper {
 		padding: 1em;
